@@ -24,8 +24,20 @@ class Lx < Formula
     end
   end
 
+  resource "man-lx" do
+    url "https://github.com/wjv/lx/releases/download/v0.6.1/lx.1"
+    sha256 ""  # TODO: fill once man pages are in release assets
+  end
+
+  resource "man-lxconfig" do
+    url "https://github.com/wjv/lx/releases/download/v0.6.1/lxconfig.toml.5"
+    sha256 ""  # TODO: fill once man pages are in release assets
+  end
+
   def install
     bin.install Dir["lx-*"].first => "lx"
+    man1.install resource("man-lx") => "lx.1"
+    man5.install resource("man-lxconfig") => "lxconfig.toml.5"
   end
 
   test do

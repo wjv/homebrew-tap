@@ -38,6 +38,8 @@ class Lx < Formula
     bin.install Dir["lx-*"].first => "lx"
     resource("man-lx").stage { man1.install "lx.1" }
     resource("man-lxconfig").stage { man5.install "lxconfig.toml.5" }
+
+    generate_completions_from_executable(bin/"lx", "--completions")
   end
 
   test do

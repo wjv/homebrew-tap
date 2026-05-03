@@ -36,6 +36,7 @@ class Lx < Formula
 
   def install
     bin.install Dir["lx-*"].first => "lx"
+    chmod 0755, bin/"lx"
     resource("man-lx").stage { man1.install "lx.1" }
     resource("man-lxconfig").stage { man5.install "lxconfig.toml.5" }
 

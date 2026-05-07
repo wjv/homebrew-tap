@@ -1,36 +1,36 @@
 class Lx < Formula
   desc "A modern file lister with personality"
   homepage "https://github.com/wjv/lx"
-  version "0.10.0"
+  version "0.10.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/wjv/lx/releases/download/v0.10.0/lx-aarch64-apple-darwin"
-      sha256 "e21a95294ec1332de27b449dad68f54b1ee37e0b67129fb529dc6fcbdb444da0"
+      url "https://github.com/wjv/lx/releases/download/v0.10.1/lx-aarch64-apple-darwin"
+      sha256 "1b5ed904940f8a1e926d80f6485c605af6f1b9c9611b4bae23fdaf3342c6fd5b"
     else
-      url "https://github.com/wjv/lx/releases/download/v0.10.0/lx-x86_64-apple-darwin"
-      sha256 "068e01184108a46f473360ed241aabfb6547aa9e88d62706b5a7729be4e68edb"
+      url "https://github.com/wjv/lx/releases/download/v0.10.1/lx-x86_64-apple-darwin"
+      sha256 "c692990d6bcaeac4f1bf285d093cb0fddf161f3e24e5fa8954886fb6afe39a63"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/wjv/lx/releases/download/v0.10.0/lx-aarch64-unknown-linux-gnu"
-      sha256 "cf5b965dbcf8385de94a35957f2bee1117234c40f500cafdc5b52757fafe2f16"
+      url "https://github.com/wjv/lx/releases/download/v0.10.1/lx-aarch64-unknown-linux-gnu"
+      sha256 "0468b41f4355084d32f6046e57a35d9e6003c9c8eca7e2face563c580b3dae1b"
     else
-      url "https://github.com/wjv/lx/releases/download/v0.10.0/lx-x86_64-unknown-linux-gnu"
-      sha256 "0300e308b720ddb85e7f2f9bf2389d0d12b56f73f965321303c712fef756daf0"
+      url "https://github.com/wjv/lx/releases/download/v0.10.1/lx-x86_64-unknown-linux-gnu"
+      sha256 "79c6c774c25b63175f550266d8ee6d68f0b73a883f1000db5f87c9f8a8853f16"
     end
   end
 
   resource "man-lx" do
-    url "https://github.com/wjv/lx/releases/download/v0.10.0/lx.1"
+    url "https://github.com/wjv/lx/releases/download/v0.10.1/lx.1"
     sha256 "59d80795b79e3a648a3e5718b3a2af2ea47873d9e63bd2dbf51485f666daaa71"
   end
 
   resource "man-lxconfig" do
-    url "https://github.com/wjv/lx/releases/download/v0.10.0/lxconfig.toml.5"
+    url "https://github.com/wjv/lx/releases/download/v0.10.1/lxconfig.toml.5"
     sha256 "67b5eaf67aaeebe5326b3d1c17cf45f9a08226338c8090c4481c7250b993a39a"
   end
 
